@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="keywords" content="">
+ <meta name="author" content="Khalifa Computer Group - مجموعة خليفة للكمبيوتر">
+ <link href="" rel="shortcut icon" type="image/x-icon">
+
+  <title>خدمة الترجمة</title>
+
+  <!-- Custom fonts-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+   <!-- Custom Jquery Confirm-->
+   <link href="vendor/jquery-confirm/css/jquery-confirm.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <!-- Modal video player------------------------------------------>
+  <div id="video_popup" class="modal  easein" tabindex="-1" data-easein="bounceIn" role="document" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg modal-fullwidth">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <!---modal header---->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align:center;font-size:1.2em;"></h4>
+        </div>
+
+        <!---end modal header---->
+        <!---sign language modal body---->
+        <div class="modal-body">
+          <div class="">
+            <!----User Guide rows/sentences ----->
+            <div class="hide_copyright"></div>
+            <video id="video_player_pop" class="video_player_pop" width="100%" controls autoplay>
+              <source src="" type="video/mp4">
+              هذا المتصفح لا يدعم تشغيل الفيديو ، يرجى استخدام متصفح الكروم
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!---end Modal popup-------------------------------->
+  <!-- Modal images viewer------------------------------------------>
+
+  <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body ">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+              class="sr-only">Close</span></button>
+          <img src="" class="imagepreview img-fluid" style="max-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---end Modal image viewer popup-------------------------------->
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <li class="nav-item">
+
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+          <div class="sidebar-brand-icon ">
+            <i class="fas fa-user"></i>
+          </div>
+        </a>
+        <div class="sidebar-brand-text">
+          <a href=" "> تسجيل دخول </a>
+        </div>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+      </li>
+
+
+
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+
+          <span>الرئيسية</span>
+          <i class="fas fa-fw fa-cog"></i>
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+
+          <span>دليل المستخدم</span>
+          <i class="fas fa-fw fa-cog"></i>
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+
+          <span>الاعدادت</span>
+          <i class="fas fa-fw fa-cog"></i>
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+
+          <span>اتصال بنا</span>
+          <i class="fas fa-fw fa-cog"></i>
+        </a>
+
+      </li>
+
+
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+
+          <div class="title"> خدمة مترمج لغة الاشارة</div>
+          <a href="" class="logo">
+            <img src="./img/logo1.png" alt="">
+          </a>
+
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- about project-->
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+
+              <!-- About the Project -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">نبذة عن المشروع</h6>
+                </div>
+                <div class="card-body">
+                  <div class="desc">
+                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                      حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                      التطبيق.
+                      إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن
+                      يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج
+                      العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.</p>
+                    <a target="_blank" rel="nofollow" href="https://undraw.co/"> قرأة المزيد&rarr;</a>
+                  </div>
+                  <div class="text-left">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                      src="img/undraw_posting_photo.svg" alt="">
+                  </div>
+
+
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--video creation-->
+          <div class="row">
+            <div class="col-lg-8 mb-4">
+
+              <!-- About the Project -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">مترجم النص</h6>
+                </div>
+                <!-- End of About the Project -->
+
+                <!-- video Tag-->
+                <div class="video-container">
+                  <video class="" id="" width="100%" height="300" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="current-text bg-gradient-danger"> الجملة الجاى ترجمتها الان </div>
+                </div>
+                <!-- End of video Tag -->
+                <!-- confirm & no confirm btns -->
+                <div class="actions-btn">
+                  <button class="btn  bg-gradient-success" id="confirm"> الترجمة صحيحة</button>
+                  <button class="btn  bg-gradient-danger" id="unconfirm"> الترجمة خاطئة</button>
+                </div>
+                <!-- End of confirm & no confirm btns -->
+                <!-- rest button-->
+                <div id="rest-btn" class="dropdown no-arrow mb-4 ">
+                  <button class="btn bg-gradient-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ضبط الإعدادت
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start"
+                    style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                    <button class="dropdown-item" href="#">الاعدادت العامة</button>
+                    <button class="dropdown-item" href="#">الاعدادت المتقدمة</button>
+
+                  </div>
+                </div>
+                <!-- End of rest button -->
+
+                <!-- text input-->
+                <div class="input-control">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id=""
+                      placeholder="أدخل النص المراد ترجمته الى إشارة" oninput="checkinputlanguage($(this))">
+                  </div>
+                  <button id="start-convert" class="btn btn-primary far fa-paper-plane"> إبدا الترجمة</button>
+                </div>
+                <!-- End of text input -->
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <!-- sugestion words  -->
+              <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                  aria-expanded="true" aria-controls="collapseCardExample">
+                  <h6 class="m-0 font-weight-bold text-primary">النصوص المقترحة</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardExample">
+
+                  <ul class="list-words">
+                    <!-- words or options suggested -->
+                    <li class="bg-gray-200 border-bottom-primary  ">
+                      <div class="txt">ذهب</div>
+                      <div class="helps">
+                        <div class="help-img">
+                          <i class="far fa-image"></i>
+                        </div>
+                        <div class="help-video">
+                          <img title="ترجم للغة الاشارة" src="img/signvideoicon.png" class="" data-toggle="modal"
+                            data-target="#video_popup" data-video="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="bg-gray-200 ">
+                      <div class="txt">ذُهٍْب</div>
+                      <div class="helps">
+                        <div class="help-img">
+                          <i class="far fa-image"></i>
+                        </div>
+                        <div class="help-video">
+                          <img title="ترجم للغة الاشارة" src="img/signvideoicon.png" class="" data-toggle="modal"
+                            data-target="#video_popup" data-video="">
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                  <div class="btns">
+                    <button id="" class="btn bg-gradient-success">
+                      اختيار الجملة المقترحة
+                    </button>
+                    <button id="" class="btn bg-gradient-warning">
+                      تعديل بالتشكيل
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- general settings -->
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+
+              <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#generalCard" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                  aria-expanded="true" aria-controls="collapseCardExample">
+                  <h6 class="m-0 font-weight-bold text-primary">الاعدادت العامة</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="generalCard">
+                  <!--select the translator-->
+                  <div class="row">
+                    <div class="col-3 left-bord">
+                      <ul class="translators">
+                        <li>
+                          <div class="top-info">
+                            <img src="./img/defualt-profile.png" class="" id="translator-img" alt="">
+                            <input type="radio" id="trans-selector" name="translators">
+                          </div>
+
+                          <div id="translat-name">أ/عمرو</div>
+                        </li>
+                        <li>
+                          <div class="top-info">
+                            <img src="./img/defualt-profile.png" class="" id="translator-img" alt="">
+                            <input type="radio" id="trans-selector" name="translators">
+                          </div>
+
+                          <div id="translat-name">أ/عمرو</div>
+                        </li>
+                      </ul>
+
+
+                    </div>
+                    <!-- End  of select the translator-->
+
+                    <div class="col-5 left-bord">
+                      <div class="row">
+                        <div class="col-6">
+                          <!-- Select language & cuntery -->
+                          <div class="trans-options">
+                            <span> إختيار اللغة</span>
+                            <select name="" aria-controls="" class="custom-select  form-control">
+                              <option selected value="1">اللغةالعربية</option>
+                              <option disabled value="0">اللغة الانجليزية</option>
+                            </select>
+                            <span> إختيار الدولة</span>
+                            <select name="" aria-controls="" class="custom-select  form-control">
+                              <option selected value="1"> مصر</option>
+                              <option disabled value="0"> السعودية</option>
+                              <option disabled value="0"> الامارات</option>
+
+                            </select>
+                          </div>
+
+                        </div>
+                        <div class="col-6">
+                          <!-- select options translate-->
+                          <div class="trans-options">
+                            <span for=""> إختيار الكلمات بالتشكيل</span>
+                            <div class="form-group">
+                              <label for="">المترجم الذكى</label>
+                              <input type="radio" id="" name="type-translate">
+                            </div>
+                            <div class="form-group">
+                              <label>التشكيل اثناء الترجمة </label>
+                              <input type="radio" id=""  name="type-translate">
+                            </div>
+                           
+                          </div>
+                          <div class="switcher">
+
+                            <label class="switch" for="general-word">
+                              <input type="checkbox" id="general-word" disabled />
+                              <div class="slider round"></div>
+                            </label>
+                            <span for="">تفعيل الكلمات العامية</span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 ">
+                      <form class="user">
+                        <div class="form-group row">
+                          <div class="col-sm-10 mb-3 mb-sm-0">
+                            <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                              placeholder="إسم المستخدم">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-10 mb-3 mb-sm-0">
+                            <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                              placeholder="كلمة المرور">
+                          </div>
+
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-10 mb-3 mb-sm-0">
+                            <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                              placeholder="اسم التطبيق">
+                          </div>
+                        </div>
+                        <a href="" class="btn btn-primary btn-user">
+                          دخول
+                        </a>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of general settings -->
+
+          <!-- Advanced settings -->
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#advancedCard" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                  aria-expanded="true" aria-controls="collapseCardExample">
+                  <h6 class="m-0 font-weight-bold text-primary">الاعدادت المتقدمة</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="advancedCard">
+                  <!-- Select  type of video -->
+                  <div class="row">
+                    <div class="col-4 left-bord">
+                      <div class="trans-options">
+                        <span> نوع ملفات الفيديو المترجمة </span>
+                        <select name="" aria-controls="" class="custom-select  form-control">
+                          <option selected value="1">Webm</option>
+                          <option disabled value="0">Mp4 </option>
+                          <option disabled value="0"> Mov</option>
+                          <option disabled value="0">Base 64 </option>
+
+                        </select>
+                        <span> نظام التشغيل </span>
+                        <select name="" aria-controls="" class="custom-select  form-control">
+                          <option selected value="1"> Web</option>
+                          <option disabled value="0"> IOS</option>
+                          <option disabled value="0"> Android</option>
+
+                        </select>
+                      </div>
+                    </div>
+                    <!-- End of Select  type of video -->
+                    <!-- Select how to show video-->
+                    <div class="col-4 left-bord">
+                      <div class="trans-options">
+                        <span for=""> عرض الفيديو Stream</span>
+                        <div class="form-group">
+                          <label for="">Yes</label>
+                          <input type="radio" id="" name="video-show">
+                        </div>
+                        <div class="form-group">
+                          <label>File Links </label>
+                          <input type="radio" id=""  name="video-show">
+                        </div>
+                      </div>
+                      <div class="trans-options">
+                        <span for=""> ترجمة قطعة او جملة </span>
+                        <div class="form-group">
+                          <label for="">ترجمة القطعة كاملة</label>
+                          <input type="radio" id="" name="translate-size">
+                        </div>
+                        <div class="form-group">
+                          <label>ترجمة جملة جملة </label>
+                          <input type="radio" id="" name="translate-size">
+                        </div>
+                       
+                      </div>
+                      <div class="switcher">
+
+                        <label class="switch" for="roules-word">
+                          <input type="checkbox" id="roules-word" disabled />
+                          <div class="slider round"></div>
+                        </label>
+                        <span for=""> تفعيل قواعد اللغة العربية </span>
+                      </div>
+                    </div>
+                    <!-- End of Select how to show video-->
+                    <div class="col-4 ">
+                      <div class="trans-options">
+                        <span for=""> طريقة عرض الترجمة</span>
+                        <div class="form-group">
+                          <label for="">عرض الترجمة فى PoPup</label>
+                          <input type="radio" id="" name="frame-video">
+
+                        </div>
+                        <div class="form-group">
+                          <label>عرض الترجمة فى عارض فيديو</label>
+                          <input type="radio" id="" name="frame-video">
+                        </div>
+
+                      </div>
+                      <div class="trans-options">
+                        <span for=""> نوع الرد فى السيرفيس</span>
+                        <div class="form-group">
+                          <label for="">JSON File</label>
+                          <input type="radio" id="" name="services-req">
+
+                        </div>
+                        <div class="form-group">
+                          <label>XML File</label>
+                          <input type="radio" id="" name="services-req">
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <!-- End  of Advanced settings -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span> جميع الحقوق محفوظة &copy; <a href=""> KCG </a>- برعاية وزارة الاتصالات </span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+ 
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+   <!-- Jquery Confirm-->
+   <script src="vendor/jquery-confirm/jquery-confirm.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.js"></script>
+  <!-- main script file -->
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
